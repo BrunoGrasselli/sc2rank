@@ -1,9 +1,14 @@
 <h1>Startcraft 2 rank</h1>
 
 <table>
+  <tr>
+    <th>Jogador</th>
+    <th>Vitórias</th>
+    <th></th>
+  </tr>
   <% @players.each do |player| %>
     <tr>
-      <td><%= player.name %></td>
+      <td><%= link_to player.name, player.profile_path %></td>
       <td><%= player.rank_wins %></td>
       <td><span class="portrait" style="<%= player.avatar %>"></span></td>
     </tr>
