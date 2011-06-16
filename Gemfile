@@ -19,6 +19,7 @@ gem 'nokogiri', '>=1.4.5'
 group :develpment, :test do
   gem 'rspec-rails', '>=2.6.1'
   gem 'factory_girl', '>=1.3.3'
+  gem 'webmock', '>=1.6.4'
 end
 
 # Use unicorn as the web server
