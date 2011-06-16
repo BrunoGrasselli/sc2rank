@@ -16,6 +16,10 @@ class Player < ActiveRecord::Base
     self.avatar = parse_avatar doc
   end
 
+  def rank_wins
+    wins - initial_points
+  end
+
   private
 
   def parse_wins(doc)

@@ -37,6 +37,14 @@ describe Player do
     end
   end
 
+  describe "#rank_wins" do
+    it "should return wins minus initial_points" do
+      subject.wins = 110
+      subject.initial_points = 100
+      subject.rank_wins.should == 10
+    end
+  end
+
   describe ".update_players!" do
     before :each do
       stub_http_request(:get, 'http://userprofile1.com').to_return body: @body
