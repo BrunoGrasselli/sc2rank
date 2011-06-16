@@ -32,7 +32,7 @@ describe Player do
     it "should update player's avatar" do
       @player.avatar = nil
       @player.parse_data
-      @player.avatar.should == "/avatar.jpg?v20"
+      @player.avatar.should == "background: url('http://us.battle.net/avatar.jpg?v20')"
     end
   end
 end
