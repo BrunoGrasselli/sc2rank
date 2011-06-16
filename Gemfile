@@ -17,7 +17,7 @@ gem 'jquery-rails'
 gem 'nokogiri', '>=1.4.5'
 
 group :develpment, :test do
-  gem 'rspec', '>=2.6.0'
+  gem 'rspec-rails', '>=2.6.1'
   gem 'factory_girl', '>=1.3.3'
 end
 

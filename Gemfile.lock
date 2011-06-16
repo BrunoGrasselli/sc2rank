@@ -90,6 +90,11 @@ GEM
     rspec-expectations (2.6.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.6.0)
+    rspec-rails (2.6.1)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      railties (~> 3.0)
+      rspec (~> 2.6.0)
     sass (3.1.2)
     sass-rails (3.1.0.rc.2)
       actionpack (~> 3.1.0.rc1)
@@ -119,7 +124,7 @@ DEPENDENCIES
   jquery-rails
   nokogiri (>= 1.4.5)
   rails (= 3.1.0.rc4)
-  rspec (>= 2.6.0)
+  rspec-rails (>= 2.6.1)
   sass-rails (~> 3.1.0.rc)
   sqlite3
   uglifier
