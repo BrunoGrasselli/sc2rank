@@ -9,7 +9,7 @@ describe Player do
             <span style="background: url('/avatar.jpg?v20')">
           </div>
         </div>
-        <div class='campaign-casual'><h2>150</h2></div>
+        <div class='module-body'><h2>150</h2></div>
     }
   end
   describe '#parse_data' do

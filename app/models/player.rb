@@ -19,7 +19,7 @@ class Player < ActiveRecord::Base
   private
 
   def parse_wins(doc)
-    doc.css('.campaign-casual h2').first.content
+    doc.css('.module-body h2').first.content
   end
 
   def parse_name(doc)

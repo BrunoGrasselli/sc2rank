@@ -24,11 +24,11 @@ describe RankController do
 
   describe "GET update" do
     before :each do
-      Player.stub :update_all
+      Player.stub :update_players!
     end
 
     it "should call Player.update_all" do
-      Player.should_receive :update_all
+      Player.should_receive :update_players!
       put :update
     end
 

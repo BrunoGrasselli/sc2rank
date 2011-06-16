@@ -11,6 +11,8 @@
 </table>
 
 <div>
-  <%= link_to 'Atualizar dados', rank_update_path %>
-  <span>Última atualização foi <%= @last_update %></span>
+  <%= link_to 'Atualizar dados', rank_update_path, method: :put %>
+  <% if @last_update.present? %>
+    <span>Última atualização foi <%= @last_update.strftime "%d/%m/%y %H:%M" %></span>
+  <% end %>
 </div>

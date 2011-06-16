@@ -5,7 +5,7 @@ class RankController < ApplicationController
   end
 
   def update
-    Player.update_all
+    Player.update_players!
 
     respond_to do |format|
       format.html { redirect_to root_path }
