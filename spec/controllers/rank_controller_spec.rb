@@ -8,6 +8,8 @@ describe RankController do
 
       get :index
       assigns[:players].should == players
+
+      Player.unstub(:all)
     end
   end
 end

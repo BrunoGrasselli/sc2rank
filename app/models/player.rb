@@ -1,6 +1,13 @@
 require 'open-uri'
 
 class Player < ActiveRecord::Base
+  def self.update_players!
+    all.each do |player|
+      player.parse_data
+      player.save!
+    end
+  end
+
   def parse_data
     doc = Nokogiri::HTML(open(profile_path))
 

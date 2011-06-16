@@ -1,9 +1,8 @@
 require 'spec_helper'
 
 describe Player do
-  describe '#parse_data' do
-    before :each do
-      body = %{
+  before :each do
+    @body = %{
         <div id='profile-header'>
           <h2>Grasselli</h2>
           <div id="portrait">
@@ -11,9 +10,11 @@ describe Player do
           </div>
         </div>
         <div class='campaign-casual'><h2>150</h2></div>
-      }
-      stub_http_request(:get, 'http://userprofile.com').to_return body: body
-
+    }
+  end
+  describe '#parse_data' do
+    before :each do
+      stub_http_request(:get, 'http://userprofile.com').to_return body: @body
       @player = Player.new profile_path: 'http://userprofile.com', initial_points: 149
     end
 
@@ -33,6 +34,23 @@ describe Player do
       @player.avatar = nil
       @player.parse_data
       @player.avatar.should == "background: url('http://us.battle.net/avatar.jpg?v20')"
+    end
+  end
+
+  describe ".update_players!" do
+    before :each do
+      stub_http_request(:get, 'http://userprofile1.com').to_return body: @body
+      stub_http_request(:get, 'http://userprofile2.com').to_return body: @body
+      @player_1 = Player.create! profile_path: 'http://userprofile1.com', initial_points: 149
+      @player_2 = Player.create! profile_path: 'http://userprofile2.com', initial_points: 149
+    end
+
+    it "should parse data and update all players" do
+      described_class.update_players!
+
+      players = Player.all
+      players.size.should == 2
+      players.each {|p| p.name.should == 'Grasselli'}
     end
   end
 end
