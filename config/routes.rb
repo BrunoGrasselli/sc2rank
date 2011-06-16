@@ -1,4 +1,5 @@
 Sc2rank::Application.routes.draw do
+  match 'rank/update' => 'rank#update', :via => :put
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
