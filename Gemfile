@@ -22,6 +22,10 @@ group :develpment, :test do
   gem 'webmock', '>=1.6.4'
 end
 
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
