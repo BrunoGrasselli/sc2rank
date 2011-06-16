@@ -15,7 +15,6 @@ group :develpment, :test do
   gem 'rspec-rails', '>=2.6.1'
   gem 'factory_girl', '>=1.3.3'
   gem 'webmock', '>=1.6.4'
-  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :production do
