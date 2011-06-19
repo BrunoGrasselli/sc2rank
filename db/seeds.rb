@@ -1,7 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Player.create! :initial_points => 1, :profile_path => "http://us.battle.net/sc2/en/profile/323733/2/MoRReDiabo/"
+Player.create! :initial_points => 149, :profile_path => "http://us.battle.net/sc2/pt/profile/23540/2/Grasselli/"
+Player.create! :initial_points => 7, :profile_path => "http://us.battle.net/sc2/en/profile/320007/2/dynaum/"
+Player.create! :initial_points => 99, :profile_path => "http://us.battle.net/sc2/en/profile/2136/2/renttor/"
