@@ -1,0 +1,11 @@
+development:
+  host: localhost
+  database: sc2rank_development
+
+test:
+  host: localhost
+  database: sc2rank_test
+
+# set these environment variables on your prod server
+production:
+  url: <%= ENV['MONGOHQ_URL'] %>
