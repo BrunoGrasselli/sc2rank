@@ -1,6 +1,14 @@
 require 'open-uri'
 
-class Player < ActiveRecord::Base
+class Player
+  include Mongoid::Document
+
+  field :profile_path, :type => String
+  field :initial_points, :type => Integer
+  field :avatar, :type => String
+  field :wins, :type => Integer
+  field :name, :type => String
+
   def self.update_players!
     all.each do |player|
       player.parse_data
