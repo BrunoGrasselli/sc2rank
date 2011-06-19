@@ -9,9 +9,10 @@ gem 'uglifier'
 gem 'jquery-rails'
 
 gem 'nokogiri', '>=1.4.5'
+gem 'bson_ext'
+gem 'mongoid'
 
 group :develpment, :test do
-  gem 'sqlite3'
   gem 'rspec-rails', '>=2.6.1'
   gem 'factory_girl', '>=1.3.3'
   gem 'webmock', '>=1.6.4'
@@ -19,6 +20,5 @@ end
 
 group :production do
   gem 'therubyracer-heroku', '0.8.1.pre3'
-  gem 'pg'
 end
 
