@@ -2,23 +2,24 @@ require 'spec_helper'
 
 describe RankController do
   describe "GET index" do
-    before :each do
-      @players = [mock(updated_at: 'time')]
-      Player.stub(:all).and_return @players
-    end
+    it "should assign all players to @players ordered by wins" do
+      Player.destroy_all
 
-    after :each do
-      Player.unstub :all
-    end
+      Player.create! :name => "QA", :initial_points => 0, :wins => 5
+      Player.create! :name => "Bruno", :initial_points => 0, :wins => 10
 
-    it "should assign all players to @players" do
       get :index
-      assigns[:players].should == @players
+      assigns[:players].map(&:name).should == ["Bruno", "QA"]
     end
 
     it "should assign last update" do
+      @players = [mock(updated_at: 'time', rank_wins: 10)]
+      Player.stub(:all).and_return @players
+
       get :index
       assigns[:last_update].should == 'time'
+
+      Player.unstub :all
     end
   end
 

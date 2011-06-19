@@ -47,6 +47,7 @@ describe Player do
 
   describe ".update_players!" do
     before :each do
+      Player.destroy_all
       stub_http_request(:get, 'http://userprofile1.com').to_return body: @body
       stub_http_request(:get, 'http://userprofile2.com').to_return body: @body
       @player_1 = Player.create! profile_path: 'http://userprofile1.com', initial_points: 149

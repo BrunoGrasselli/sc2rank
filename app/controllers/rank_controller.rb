@@ -1,6 +1,6 @@
 class RankController < ApplicationController
   def index
-    @players = Player.all
+    @players = Player.all.to_a
     @players.sort! { |a,b| b.rank_wins <=> a.rank_wins }
     @last_update = @players.first.try :updated_at
   end
