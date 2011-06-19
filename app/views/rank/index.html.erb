@@ -3,15 +3,14 @@
 <section id="players">
   <table>
     <tr>
-      <th>Jogador</th>
+      <th colspan="2">Jogador</th>
       <th>Vitórias</th>
-      <th></th>
     </tr>
     <% @players.each do |player| %>
       <tr>
+        <td class="avatar"><span class="portrait" style="<%= player.avatar %>"></span></td>
         <td><%= link_to player.name, player.profile_path %></td>
-        <td><%= player.rank_wins %></td>
-        <td><span class="portrait" style="<%= player.avatar %>"></span></td>
+        <td class="score"><%= player.rank_wins %></td>
       </tr>
     <% end %>
   </table>
