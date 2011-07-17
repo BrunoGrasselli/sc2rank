@@ -6,3 +6,4 @@ Player.create! :initial_points => 14, :profile_path => "http://us.battle.net/sc2
 Player.create! :initial_points => 505, :profile_path => "http://us.battle.net/sc2/en/profile/217760/2/RANKAPREGA/", :wins => 0
 Player.create! :initial_points => 0, :profile_path => "http://us.battle.net/sc2/en/profile/203024/2/lucashungaro/", :wins => 0
 Player.create! :initial_points => 11, :profile_path => "http://us.battle.net/sc2/pt/profile/292365/2/Lazanha/", :wins => 0
+Player.create! :initial_points => 0, :profile_path => "http://us.battle.net/sc2/en/profile/327044/2/nittivini/", :wins => 0
