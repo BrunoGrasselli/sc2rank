@@ -1,7 +1,8 @@
 Feature: Admin pages
 
   Scenario: Using all pages
-    Given an user exists
+    Given there is no player
+    And an user exists
     And I am on the admin page
     When I fill in "Email" with "test@email.com"
     And I fill in "Password" with "123456"
