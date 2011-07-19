@@ -11,6 +11,8 @@ gem 'jquery-rails'
 gem 'nokogiri', '>=1.4.5'
 gem 'bson_ext'
 gem 'mongoid'
+gem 'devise'
+gem 'inherited_resources'
 
 group :develpment, :test do
   gem 'rspec-rails', '>=2.6.1'
