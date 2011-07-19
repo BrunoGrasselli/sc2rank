@@ -1,4 +1,5 @@
 Sc2rank::Application.routes.draw do
+  devise_for :users
   namespace :admin do
     resources :players
   end
