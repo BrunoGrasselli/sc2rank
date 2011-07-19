@@ -1,0 +1,14 @@
+<%= form_for [:admin, player] do |f| %>
+  <div>
+    <p><%= player.name %></p>
+  </div>
+  <div>
+    <%= f.label :initial_points, 'Pontos iniciais' %>
+    <%= f.text_field :initial_points %>
+  </div>
+  <div>
+    <%= f.label :profile_path, 'Perfil' %>
+    <%= f.text_field :profile_path %>
+  </div>
+  <%= f.submit %>
+<% end %>
