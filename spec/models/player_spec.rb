@@ -62,4 +62,19 @@ describe Player do
       players.each {|p| p.name.should == 'Grasselli'}
     end
   end
+
+  describe ".reset_wins" do
+    before :each do
+      Player.destroy_all
+      Player.create! initial_points: 1, :wins => 10
+    end
+
+    let(:player) { Player.last }
+
+    it "should resets the wins" do
+      described_class.reset_wins!
+      player.wins.should be_zero
+      player.initial_points.should == 11
+    end
+  end
 end

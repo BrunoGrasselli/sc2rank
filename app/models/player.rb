@@ -16,6 +16,14 @@ class Player
     end
   end
 
+  def self.reset_wins!
+    all.each do |player|
+      player.initial_points += player.wins
+      player.wins = 0
+      player.save!
+    end
+  end
+
   def parse_data
     doc = Nokogiri::HTML(open(profile_path))
 
