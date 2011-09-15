@@ -18,8 +18,7 @@ class Player
 
   def self.reset_wins!
     all.each do |player|
-      player.initial_points += player.wins
-      player.wins = 0
+      player.initial_points = player.wins
       player.save!
     end
   end

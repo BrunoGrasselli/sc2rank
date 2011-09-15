@@ -73,8 +73,8 @@ describe Player do
 
     it "should resets the wins" do
       described_class.reset_wins!
-      player.wins.should be_zero
-      player.initial_points.should == 11
+      player.wins.should == 10
+      player.initial_points.should == 10
     end
   end
 end
