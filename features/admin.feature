@@ -26,3 +26,6 @@ Feature: Admin pages
     And I follow "Excluir"
     Then I should see "Player was successfully destroyed"
     But I should not see "Editar"
+
+    When I follow "Zerar rank"
+    Then I should see "Rank zerado"
