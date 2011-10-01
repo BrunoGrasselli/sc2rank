@@ -13,6 +13,7 @@ gem 'bson_ext'
 gem 'mongoid'
 gem 'devise'
 gem 'inherited_resources'
+gem 'thin'
 
 group :develpment, :test do
   gem 'rspec-rails', '>=2.6.1'
