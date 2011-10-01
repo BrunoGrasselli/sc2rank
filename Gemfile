@@ -12,7 +12,7 @@ gem 'nokogiri', '>=1.4.6'
 gem 'bson_ext'
 gem 'mongoid'
 gem 'devise'
-gem 'inherited_resources'
+gem 'inherited_resources', '1.2.2'
 gem 'thin'
 
 group :develpment, :test do
